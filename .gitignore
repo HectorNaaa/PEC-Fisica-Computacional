@@ -1,0 +1,13 @@
+# Compiled output
+simulacion
+simulacion.exe
+*.o
+*.out
+
+# Data output files
+*.dat
+
+# Python visualisation artefacts
+*.png
+__pycache__/
+*.pyc
