@@ -1,4 +1,4 @@
-Disclaimer: Se ha usado como modelo de IA Claude Sonnet 4.6 desde visual studio code y git actions. Acerca del tema de la IA se ha usado en un 25-30% aproximadamente para limpieza, comentarios, revisión de los modelos numéricos implementados y ampliación y formateo del readme.me
+Disclaimer: Se ha usado como modelo de IA Claude Sonnet 4.6 desde visual studio code y git actions. Acerca del tema de la IA se ha usado en un 25-30% aproximadamente para limpieza, comentarios, revisión de los modelos numéricos implementados y ampliación y formateo del readme.me. Mas información en https://github.com/HectorNaaa/PEC-Fisica-Computacional
 
 # PEC — Física Computacional: Patrones de Turing
 
