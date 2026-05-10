@@ -1,4 +1,55 @@
-# Brusselator Reaction-Diffusion — Patrones de Turing (PEC Física Computacional)
+# PEC — Física Computacional: Patrones de Turing
+
+Simulación 2D del modelo Brusselator y análisis de la inestabilidad de Turing.
+
+## Estructura
+
+```
+ejercicio1/   main.c                          — Simulación en C (Euler explícito)
+ejercicio2/   ejercicio2.m                    — Visualización y ajuste λ (MATLAB)
+ejercicio3/   ejercicio3_estabilidad_lineal.m — Estabilidad lineal (MATLAB)
+```
+
+## Uso
+
+**1. Compilar y ejecutar la simulación (`ejercicio1/`)**
+
+```bash
+cd ejercicio1
+gcc main.c -o simulacion -lm
+./simulacion        # Windows: .\simulacion.exe
+```
+
+Genera: `u_0.dat … u_9.dat`, `amplitud.dat`, `time.dat`
+
+**2. Análisis en MATLAB (`ejercicio2/`)**
+
+```matlab
+cd ejercicio2
+run ejercicio2.m
+```
+
+Lee los `.dat` desde `../ejercicio1/`. Produce la animación del patrón y el ajuste de A(t) → λ.
+
+**3. Estabilidad lineal (`ejercicio3/`)**
+
+```matlab
+cd ejercicio3
+run ejercicio3_estabilidad_lineal.m
+```
+
+No depende de datos externos. Calcula el Jacobiano, autovalores y la relación de dispersión λ(k).
+
+## Modelo
+
+```
+du/dt = Du·∇²u + a − u + u²v      Du = 1
+dv/dt = Dv·∇²v + b − u²v          Dv = 10
+```
+
+Estado estacionario: `u0 = a+b = 1`,  `v0 = b/(a+b)² = 0.9`
+
+La inestabilidad de Turing aparece porque `Dv >> Du`: el inhibidor v difunde mucho más rápido que el activador u, desestabilizando el estado homogéneo para modos espaciales con longitud de onda `L* = 2π/k*`. La λ* predicha en el ejercicio 3 debe coincidir con la pendiente medida empíricamente en el ejercicio 2.
 
 Simulación numérica 2D del modelo Brusselator mediante Euler explícito.  
 Genera patrones de Turing a partir de una perturbación gaussiana sobre el estado estacionario homogéneo.

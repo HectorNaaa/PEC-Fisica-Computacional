@@ -4,10 +4,6 @@ simulacion.exe
 *.o
 *.out
 
-# Data output files
-*.dat
-
-# Python visualisation artefacts
-*.png
+# Python artefacts
 __pycache__/
 *.pyc
